@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+		    http://www.springframework.org/schema/beans
+		    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		    http://www.springframework.org/schema/context
+		    http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		    http://www.springframework.org/schema/mvc
+		    http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+
+    <!-- 处理器映射器  默认的注解映射的支持  方法一 -->
+    <mvc:annotation-driven />
+
+    <!--注意：这个控制器注解，要是放到applicationContext.xml中，就无法读取@Controller注解-->
+    <!-- 注解控测器-->
+    <context:component-scan base-package="com.luohw.springmvc.*">
+    </context:component-scan>
+
+    <!-- 国际化资源配置 -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <!-- 国际化信息所在的文件名 -->
+        <property name="basename" value="messages/message"/>
+        <!-- 如果在国际化资源文件中找不到对应代码的信息，就用这个代码作为名称  -->
+        <property name="useCodeAsDefaultMessage" value="true" />
+    </bean>
+
+    <!-- jsp jstl -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!-- 静态资源过滤 -->
+    <mvc:resources location="/res/" mapping="/res/**"/>
+    <mvc:resources location="/WEB-INF/pages/error/" mapping="/WEB-INF/pages/error/**"/>
+
+
+</beans>
