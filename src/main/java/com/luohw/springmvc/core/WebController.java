@@ -8,7 +8,7 @@ public class WebController {
 
 	@RequestMapping("/")
 	public String index(){
-		System.out.println("========");
+
 		return "login";
 	}
 	

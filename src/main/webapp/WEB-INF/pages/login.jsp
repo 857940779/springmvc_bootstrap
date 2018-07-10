@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--title-->
        	<%@ include file="/WEB-INF/pages/include/title.jsp" %>
        	
 		<link rel="stylesheet" href="<%=path%>/res/plugins/validator/bootstrapValidator.min.css">
@@ -19,6 +18,29 @@
 					increaseArea : '20%' // optional
 				});
 			});
+
+            $(document).ready(function() {
+                $('#sign').bootstrapValidator({
+                    message: 'This value is not valid',
+                    feedbackIcons: {
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields: {
+                        username: {
+                            validators: {
+                                notEmpty: {}
+                            }
+                        },
+                        password: {
+                            validators: {
+                                notEmpty: {}
+                            }
+                        }
+                    }
+                });
+            });
 		</script>
 	</head>
 	
@@ -33,7 +55,7 @@
 				  <p class="login-box-msg"><sp:message code="user.login"/></p> 
 					<!--<sp:message code="user.login"/>-->
 	
-				<form id="sign" action="<%=path%>/account/sign" method="post">
+				<form id="sign" action="<%=path%>/login" method="post">
 					<div class="form-group has-feedback">
 						<input type="text" class="form-control" name="username" placeholder="<sp:message code="user.username"/>">
 					</div>
@@ -60,38 +82,10 @@
 						<a href="<%=path%>/account/reg" class="btn btn-default btn-block"> <sp:message code="user.reg"/> </a>
 					</div>
 				</div>
-				<!-- <a href="<%=path%>/register.jsp">忘记密码?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="<%=path%>/account/reg" class="text-center"> <sp:message code="user.reg"/> </a>
-				 -->
+
 	
 			</div>
-			<!-- /.login-box-body -->
 		</div>
-		<!-- /.login-box -->
-		
-		<script type="text/javascript">
-			$(document).ready(function() {
-			    $('#sign').bootstrapValidator({
-			        message: 'This value is not valid',
-			        feedbackIcons: {
-			            valid: 'glyphicon glyphicon-ok',
-			            invalid: 'glyphicon glyphicon-remove',
-			            validating: 'glyphicon glyphicon-refresh'
-			        },
-			        fields: {
-			            username: {
-			                validators: {
-			                    notEmpty: {}
-			                }
-			            },
-			            password: {
-			                validators: {
-			                	notEmpty: {}
-			                }
-			            }
-			        }
-			    });
-			});
-		</script>
+
 	</body>
 </html>

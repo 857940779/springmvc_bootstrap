@@ -1,12 +1,4 @@
-<%@ page language="java" pageEncoding="UTF-8" import="java.util.*,com.cyh.sy.entity.*"%>
-<%
-	Company user = (Company)session.getAttribute("currentUser"); //登录用户
-	if(user == null){
-%>
-	<jsp:forward page="/WEB-INF/pages/timeout.jsp"/>
-<%
-	}
-%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 
 <header class="main-header">
 	<!-- Logo -->
