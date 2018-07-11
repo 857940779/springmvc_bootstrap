@@ -334,7 +334,7 @@
 				</section>
 			
 				<!-- Main content -->
-				<section class="content">
+				-<section class="content">
 					<!-- 查询、添加、批量删除、导出、刷新 -->
 					<div class="row-fluid">
 					
