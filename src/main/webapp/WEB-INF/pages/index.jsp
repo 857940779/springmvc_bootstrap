@@ -324,85 +324,13 @@
 			
 			<!--菜单-->
        		<%@ include file="include/menu.jsp" %>
-	
-			<div class="content-wrapper">
-				<section class="content-header">
-				
-					<!-- 路径导航 -->
-					<a href="<%=path%>/"><i class="fa fa-home"></i> <sp:message code="sys.home"/></a> > 
-					<a href="<%=path%>/com/list"><sp:message code="menu.company"/></a>&nbsp;&nbsp;<small><sp:message code="user.list"/></small>
-				</section>
-			
-				<!-- Main content -->
-				<section class="content">
-					<!-- 查询、添加、批量删除、导出、刷新 -->
-					<div class="row-fluid">
-					
-						<div class="pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-primary btn-sm" id="btn-re">
-									<i class="fa fa-refresh"></i> <sp:message code="sys.refresh"/>
-								</button>
-							</div>
-						</div>
 
-						<div class="row">
-							<form id="queryForm" action="<%=path%>/com/list" method="post">
-								<div class="col-xs-1">
-									<select id="area" name="type" class="form-control input-sm">
-										<option value="0"><sp:message code="sys.all"/></option>
-										<option value="4"><sp:message code="com.jks"/></option>
-										<option value="5"><sp:message code="com.dls"/></option>
-										<option value="2"><sp:message code="com.scs"/></option>
-										<option value="3"><sp:message code="com.cks"/></option>
-										<option value="6"><sp:message code="com.jxs"/></option>
-										<option value="1"><sp:message code="com.gly"/></option>
-									</select>
-								</div>
-								<div class="col-xs-2">
-									<input type="text" id="keyword" name="keyword" class="form-control input-sm"
-										placeholder="<sp:message code="sys.keyword"/>">
-								</div>
-								<button type="button" class="btn btn-primary btn-sm" id="btn-query">
-									<i class="fa fa-search"></i> <sp:message code="sys.query"/>
-								</button>
-							</form>
-						</div>
-					</div>
-	                
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="box">
-								<div class="box-body">
-									<table id="dataTable" class="table table-striped table-bordered table-hover table-condensed" align="center">
-										<thead>
-											<tr class="info">
-												<!-- <td><input type="checkbox" id="checkAll"></td> -->
-												<th><sp:message code="sys.no"/></th>
-												<th><sp:message code="user.username"/></th>
-												<th><sp:message code="user.type"/></th>
-												<th><sp:message code="com.con.name"/></th>
-												<th><sp:message code="com.con.tel"/></th>
-												<th><sp:message code="com.con.email"/></th>
-												<th><sp:message code="com.name"/></th>
-												<th><sp:message code="sys.create.time"/></th>
-												<th><sp:message code="sys.status"/></th>
-												<th><sp:message code="sys.oper"/></th>
-											</tr>
-										</thead>
-									</table>
-								</div>
-								<!-- /.box-body -->
-							</div>
-							<!-- /.box -->
-						</div>
-						<!-- /.col -->
-					</div>
-					<!-- /.row -->
-				</section>
+			<!--右侧内容框，使用iframe代替,后续所哟页面跳转，都是iframe里面变化-->
 
-			</div>
-	
+			<iframe id="main_frame" name="main_frame" style="position:relative; margin-top: 40px;"
+					frameborder="0" width="100%" height="100%" scrolling="auto" onload="resizeIFrame()"></iframe>
+
+
 			<!--footer-->
 	       	<%@ include file="include/footer.jsp" %>
 			<div class="control-sidebar-bg"></div>

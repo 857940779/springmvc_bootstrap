@@ -8,7 +8,10 @@
 		<ul class="sidebar-menu">
 			<li class="header"><sp:message code="menu"/></li>
 			<li class="treeview">
-				<a href="<%=path%>/user/list"> <i class="fa fa-user"></i><span><sp:message code="menu.company"/></span></a>
+				<!--使用target来制定页面只在ifrmae内生效-->
+					<a target="main_frame" href="<%=path%>/user/list">
+						<i class="fa fa-user"></i><span><sp:message code="menu.company"/></span>
+					</a>
 			</li>
 			<li class="treeview">
 				<a href="<%=path%>/area/list"> <i class="fa fa-edit"></i><span><sp:message code="menu.area"/></span></a>

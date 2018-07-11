@@ -10,6 +10,6 @@ public class UserController {
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public String userList(){
-        return "index";
+        return "/user/user_list";
     }
 }
