@@ -328,7 +328,7 @@
 			<!--右侧内容框，使用iframe代替,后续所哟页面跳转，都是iframe里面变化-->
 
 			<iframe id="main_frame" name="main_frame" style="position:relative; margin-top: 40px;"
-					frameborder="0" width="100%" height="100%" scrolling="auto" onload="resizeIFrame()"></iframe>
+					frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
 
 
 			<!--footer-->
