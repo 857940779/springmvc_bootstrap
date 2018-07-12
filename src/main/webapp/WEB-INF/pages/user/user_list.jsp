@@ -17,6 +17,53 @@
 		<script>
 			//页面加载后，发起ajax请求
 			$(function(){
+//                $('#example').DataTable({
+//                    "searching": false,
+//                    "serverSide": true,
+//                    "bProcessing": true,
+//                    "bPaginate": true, //翻页功能
+//                    "bLengthChange": true, //改变每页显示数据数量
+//                    "bFilter": true, //过滤功能
+//                    "bSort": false, //排序功能
+//                    "sPaginationType": "full_numbers",
+//                    "fnServerData": function (sSource, aoData, fnCallback) {
+//                        $.ajax({
+//                            "dataType": 'json',
+//                            "type": "get",
+//                            "url": "/user/page",
+//                            "contentType": "application/json; charset=utf-8",
+//                            "data": JSON.stringify(json),
+//                            "success": function (data) {
+//                                data.recordsTotal = data.page.recordsTotal;
+//                                data.recordsFiltered = data.page.recordsTotal;
+//                                fnCallback(data);
+//                            }
+//                        });
+//                    },
+//                    "oLanguage": {
+//                        "sLengthMenu": "每页显示 _MENU_ 条记录",
+//                        "sZeroRecords": "抱歉， 没有找到",
+//                        "sInfoEmpty": "没有数据",
+//                        "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+//                        "oPaginate": {
+//                            "sFirst": "首页",
+//                            "sPrevious": "前一页",
+//                            "sNext": "后一页",
+//                            "sLast": "尾页"
+//                        },
+//                        "sZeroRecords": "没有检索到数据",
+//                    },
+//                    "aoColumns": [
+//                        {"data": "userName"},
+//                        {"data": "state"},
+//                        {"data": "registerTime"},
+//                        {"data": "roleId"}
+//                    ]
+//                });
+
+
+				//公司的那套
+
                 $("#example1").dataTable({
                     "aoColumnDefs": [
                         {
