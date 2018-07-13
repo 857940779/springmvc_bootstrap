@@ -16,22 +16,13 @@
 		<script src="<%=path%>/res/dist/js/demo.js"></script>
 
 
+		<!--引入网上js-->
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.css"/>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.js"></script>
 
 		<script>
             $(document).ready(function() {
-
-//                $('#example').DataTable( {
-//                    processing:true,
-//                    serverSide:true,
-//                    ajax: {
-//                        url: '/user/page',
-//                        dataSrc: ''
-//                    },
-//                    columns: [ { data: 'userName' },
-//                                { data: 'state' },
-//                                { data: 'registerTime' },
-//                                { data: 'roleId' }]
-//            });
 
                 $.ajax({
                     "dataType": 'json',
@@ -39,14 +30,18 @@
                     "url": "/user/page",
                     //"data": {"applyId": actId},  上送参数
                     "success": function (data) {
-                        console.log(data);
+                        //这里需要把返回的string转换为josn数组
+                        var array=eval(data);
 
-//                        $('#example').DataTable({
-//                            data: data,
-//                            columns: [
-//                                { data: "userName" }
-//                            ]
-//                        } );
+                        $('#example').DataTable({
+                            data: array,
+                            columns: [
+                                {data: "userName" },
+								{data:"state"},
+								{data:"registerTime"},
+								{data:"roleId"}
+                            ]
+                        } );
                     }
                 });
             } );
@@ -72,7 +67,7 @@
 						<div class="col-xs-12">
 							<div class="box">
 								<div class="box-body">
-									<table id="example1"  class="display" cellspacing="0" width="100%">
+									<table id="example"  class="display" cellspacing="0" width="100%">
 										<thead>
 											<tr>
 												<th>用户名称</th>
