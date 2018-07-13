@@ -9,13 +9,11 @@
 <link rel="stylesheet" href="<%=path%>/res/bootstrap/css/bootstrap.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="<%=path%>/res/dist/css/AdminLTE.css">
-<!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="<%=path%>/res/dist/css/skins/_all-skins.min.css">
 
 <!-- iCheck -->
 <link rel="stylesheet" href="<%=path%>/res/plugins/iCheck/square/blue.css">
-<!-- DataTables -->
-<link rel="stylesheet" href="<%=path%>/res/plugins/datatables/dataTables.bootstrap.css">
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="<%=path%>/res/plugins/fontawesome/css/font-awesome.min.css">
 <!-- Ionicons -->
@@ -35,8 +33,11 @@
 <script src="<%=path%>/res/plugins/iCheck/icheck.min.js"></script>
 
 <!-- DataTables -->
+<link rel="stylesheet" href="<%=path%>/res/plugins/datatables/dataTables.bootstrap.css">
 <script src="<%=path%>/res/plugins/datatables/jquery.dataTables.js"></script>
 <script src="<%=path%>/res/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+
 <!-- SlimScroll -->
 <script src="<%=path%>/res/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- custom-->
@@ -46,7 +47,6 @@
 <!-- sweetalert -->
 <script src="<%=path%>/res/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript">
-<!--
 	toastr.options = {  
         closeButton: false,  
         debug: false,  
@@ -61,7 +61,5 @@
         hideEasing: "linear",  
         showMethod: "fadeIn",  
         hideMethod: "fadeOut"  
-    };  
-//-->
+    };
 </script>
-<!-- custom-->

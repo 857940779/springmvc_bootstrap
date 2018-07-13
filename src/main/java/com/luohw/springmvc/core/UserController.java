@@ -33,7 +33,10 @@ public class UserController {
             userVO.setState(i%3);
             list.add(userVO);
         }
-        return JSON.toJSONString(list);
+        System.out.println("========");
+        String str=JSON.toJSONString(list);
+        System.out.println(str);
+        return JSON.toJSONString(str);
     }
 
 }

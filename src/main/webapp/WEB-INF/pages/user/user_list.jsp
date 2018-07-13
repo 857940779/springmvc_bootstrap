@@ -14,109 +14,42 @@
 		<script src="<%=path%>/res/plugins/fastclick/fastclick.js"></script>
 		<script src="<%=path%>/res/dist/js/app.min.js"></script>
 		<script src="<%=path%>/res/dist/js/demo.js"></script>
+
+
+
 		<script>
-			//页面加载后，发起ajax请求
-			$(function(){
-//                $('#example').DataTable({
-//                    "searching": false,
-//                    "serverSide": true,
-//                    "bProcessing": true,
-//                    "bPaginate": true, //翻页功能
-//                    "bLengthChange": true, //改变每页显示数据数量
-//                    "bFilter": true, //过滤功能
-//                    "bSort": false, //排序功能
-//                    "sPaginationType": "full_numbers",
-//                    "fnServerData": function (sSource, aoData, fnCallback) {
-//                        $.ajax({
-//                            "dataType": 'json',
-//                            "type": "get",
-//                            "url": "/user/page",
-//                            "contentType": "application/json; charset=utf-8",
-//                            "data": JSON.stringify(json),
-//                            "success": function (data) {
-//                                data.recordsTotal = data.page.recordsTotal;
-//                                data.recordsFiltered = data.page.recordsTotal;
-//                                fnCallback(data);
-//                            }
-//                        });
+            $(document).ready(function() {
+
+//                $('#example').DataTable( {
+//                    processing:true,
+//                    serverSide:true,
+//                    ajax: {
+//                        url: '/user/page',
+//                        dataSrc: ''
 //                    },
-//                    "oLanguage": {
-//                        "sLengthMenu": "每页显示 _MENU_ 条记录",
-//                        "sZeroRecords": "抱歉， 没有找到",
-//                        "sInfoEmpty": "没有数据",
-//                        "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
-//                        "oPaginate": {
-//                            "sFirst": "首页",
-//                            "sPrevious": "前一页",
-//                            "sNext": "后一页",
-//                            "sLast": "尾页"
-//                        },
-//                        "sZeroRecords": "没有检索到数据",
-//                    },
-//                    "aoColumns": [
-//                        {"data": "userName"},
-//                        {"data": "state"},
-//                        {"data": "registerTime"},
-//                        {"data": "roleId"}
-//                    ]
-//                });
+//                    columns: [ { data: 'userName' },
+//                                { data: 'state' },
+//                                { data: 'registerTime' },
+//                                { data: 'roleId' }]
+//            });
 
+                $.ajax({
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": "/user/page",
+                    //"data": {"applyId": actId},  上送参数
+                    "success": function (data) {
+                        console.log(data);
 
-				//公司的那套
-
-                $("#example1").dataTable({
-                    "aoColumnDefs": [
-                        {
-                            "mData": "userName",
-                            "aTargets": [0],
-                            "bSortable": false
-                        },
-                        {
-                            "mData": "state",
-                            "aTargets": [1],
-                            "bSortable": false
-                        },
-                        {
-                            "mData": "registerTime",
-                            "aTargets": [2],
-                            "bSortable": false
-                        },
-                        {
-                            "mData": "roleId",
-                            "aTargets": [3],
-                            "bSortable": false
-                        }
-                    ],
-                    "sAjaxSource": '/user/page'
+//                        $('#example').DataTable({
+//                            data: data,
+//                            columns: [
+//                                { data: "userName" }
+//                            ]
+//                        } );
+                    }
                 });
-
-
-//                $('#example1').DataTable({
-//					ajax:'/user/page',
-//					columns:[
-//						{data:'userName'},
-//						{data:'state'},
-//						{data:'registerTime'},
-//						{data:'roleId'}
-//					]
-//				});
-
-
-//                $.ajax({
-//                    url: "/user/page",
-//                    type: 'GET',
-//                    dataType: 'json',
-//                    success: function (data) {
-//                        $('#example1').DataTable({
-//                            "data": data,
-//                            "paging": true,
-//                            "lengthChange": false,
-//                            "ordering": false,
-//                            "info": true
-//                        });
-//                    }
-//                });
-			});
+            } );
 
 		</script>
 
@@ -139,16 +72,17 @@
 						<div class="col-xs-12">
 							<div class="box">
 								<div class="box-body">
-									<table id="example1" class="table table-bordered table-striped">
-										<%--<thead>--%>
-											<%--<tr>--%>
-												<%--<th>用户名称</th>--%>
-												<%--<th>状态</th>--%>
-												<%--<th>注册时间</th>--%>
-												<%--<th>角色</th>--%>
-											<%--</tr>--%>
-										<%--</thead>--%>
+									<table id="example1"  class="display" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>用户名称</th>
+												<th>状态</th>
+												<th>注册时间</th>
+												<th>角色</th>
+											</tr>
+										</thead>
 									</table>
+
 								</div>
 							</div>
 						</div>

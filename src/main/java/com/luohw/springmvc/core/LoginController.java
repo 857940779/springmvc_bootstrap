@@ -10,9 +10,8 @@ public class LoginController {
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(){
         //TODO  登陆校验
-        System.out.println("========");
         System.out.println("login");
-        System.out.println("========");
+
         //登陆后跳转到首页
         return "index";
     }
