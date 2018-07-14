@@ -1,0 +1,28 @@
+<!--[if lt IE 9]>
+<script src="/res/metronic/js/respond.min.js"></script>
+<script src="/res/metronic/js/excanvas.min.js"></script>
+<script src="/res/metronic/js/ie8.fix.min.js"></script>
+<![endif]-->
+<!-- BEGIN CORE PLUGINS -->
+<script src="/res/metronic/js/jquery.min.js" type="text/javascript"></script>
+<script src="/res/metronic/js/js.cookie.min.js" type="text/javascript"></script>
+<script src="/res/metronic/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/res/metronic/js/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/res/metronic/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/res/metronic/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN THEME GLOBAL SCRIPTS -->
+<script src="/res/metronic/js/app.min.js" type="text/javascript"></script>
+<!-- END THEME GLOBAL SCRIPTS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="/res/metronic/js/layout.min.js" type="text/javascript"></script>
+<script src="/res/metronic/js/demo.min.js" type="text/javascript"></script>
+<script src="/res/metronic/js/quick-sidebar.min.js" type="text/javascript"></script>
+<script src="/res/metronic/js/quick-nav.min.js" type="text/javascript"></script>
+<!-- END THEME LAYOUT SCRIPTS -->

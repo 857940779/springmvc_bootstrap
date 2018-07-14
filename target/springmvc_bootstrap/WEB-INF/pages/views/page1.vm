@@ -1,0 +1,20 @@
+#set($layout = "/layout/none.vm")
+#define($content)
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>测试页</title>
+	<link rel="shortcut icon" href="/" />
+	<script type="text/javascript" src=""></script>
+</head>
+<body>
+<div class="container">
+	<h4 class="view-title">测试页</h4>
+</div>
+</body>
+</html>
+#end

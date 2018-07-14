@@ -22,4 +22,14 @@ public class TestController {
         System.out.println(str);
        return str;
     }
+
+    @RequestMapping("/1")
+    public String page1() {
+        return "page1";
+    }
+
+    @RequestMapping("/2")
+    public String page2() {
+        return "page2";
+    }
 }

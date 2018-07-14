@@ -1,0 +1,18 @@
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="/res/metronic/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/res/metronic/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+<link href="/res/metronic/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/res/metronic/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css">
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN THEME GLOBAL STYLES -->
+<link href="/res/metronic/css/components.min.css" rel="stylesheet" id="style_components" type="text/css">
+<link href="/res/metronic/css/plugins.min.css" rel="stylesheet" type="text/css">
+<!-- END THEME GLOBAL STYLES -->
+<!-- BEGIN THEME LAYOUT STYLES -->
+<link href="/res/metronic/css/layout.min.css" rel="stylesheet" type="text/css">
+<link href="/res/metronic/css/default.min.css" rel="stylesheet" type="text/css" id="style_color">
+<link href="/res/metronic/css/custom.min.css" rel="stylesheet" type="text/css">
+<!-- END THEME LAYOUT STYLES -->
