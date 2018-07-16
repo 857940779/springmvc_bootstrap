@@ -14,7 +14,9 @@
 					</a>
 			</li>
 			<li class="treeview">
-				<a href="<%=path%>/area/list"> <i class="fa fa-edit"></i><span><sp:message code="menu.area"/></span></a>
+				<a target="main_frame" href="<%=path%>/area/list">
+					<i class="fa fa-user"></i><span><sp:message code="menu.area"/></span>
+				</a>
 			</li>
 			<li class="treeview">
 				<a href="<%=path%>/area/list"> <i class="fa fa-edit"></i><span><sp:message code="menu.task"/></span></a>

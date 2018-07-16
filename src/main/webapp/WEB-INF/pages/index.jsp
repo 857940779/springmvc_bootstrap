@@ -318,6 +318,10 @@
 	</head>
 	
 	<body class="hold-transition skin-blue sidebar-mini">
+	  <div>${userVO.userName}</div>
+	  <div>${name}</div>
+	  <div>${requestScope.name}</div>
+
 		<div class="wrapper">
 			<!--头部-->
        		<%@ include file="include/header.jsp" %>
