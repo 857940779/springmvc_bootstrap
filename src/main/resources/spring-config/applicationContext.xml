@@ -11,4 +11,7 @@
     <context:property-placeholder location="classpath:config.properties"/>
 
     <import resource="classpath:spring-config/spring-mybatis.xml"/>
+    <import resource="classpath:spring-config/kafka_producer.xml"/>
+    <import resource="classpath:spring-config/kafka_consumer.xml"/>
+
 </beans>
