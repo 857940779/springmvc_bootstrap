@@ -36,8 +36,18 @@
     <bean id="messageListernerConsumerService" class="com.luohw.springmvc.kafka.KafkaConsumerServer"/>
 
     <!-- 消费者容器配置信息 -->
+    <!--<bean id="containerProperties" class="org.springframework.kafka.listener.config.ContainerProperties">-->
+        <!--<constructor-arg value="luohwTest"/>-->
+        <!--<property name="messageListener" ref="messageListernerConsumerService"/>-->
+    <!--</bean>-->
+
     <bean id="containerProperties" class="org.springframework.kafka.listener.config.ContainerProperties">
-        <constructor-arg value="luohwTest"/>
+        <constructor-arg name="topics">
+            <list>
+              <value>luohwTest</value>
+              <value>kafkaTest</value>
+            </list>
+        </constructor-arg>
         <property name="messageListener" ref="messageListernerConsumerService"/>
     </bean>
 

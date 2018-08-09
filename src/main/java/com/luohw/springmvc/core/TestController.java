@@ -32,8 +32,10 @@ public class TestController {
     @ResponseBody
     public String save() {
         System.out.println("-----------------------------");
-        kafkaTemplate.sendDefault("KAFKA分布式消息服务测试");
-        return "测试完成，具体输出看日志";
+        //kafkaTemplate.sendDefault("KAFKA分布式消息服务测试");
+        kafkaTemplate.send("kafkaTest","this is a new topic message");
+
+        return "test is success";
     }
 
 }
